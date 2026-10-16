@@ -121,10 +121,21 @@ async function loadRecord(documentNumber) {
   } catch {
     throw new Error('Não foi possível acessar o servidor. Abra a página pelo endereço do backend, fora da prévia do ChatGPT.');
   }
-  if (!response.ok) throw new Error('O servidor não conseguiu consultar o histórico. Nenhuma data foi reiniciada.');
   let record;
   try { record = await response.json(); } catch {
     throw new Error('O backend não está disponível neste endereço. Não foi criado um histórico temporário.');
+  }
+  if (!response.ok) {
+    const diagnostics = {
+      DATABASE_URL_MISSING: 'O banco Neon ainda não está conectado ao projeto na Vercel. Conecte o banco e faça um novo deploy.',
+      DATABASE_URL_INVALID: 'A conexão com o Neon está incorreta. Revise DATABASE_URL na Vercel e faça um novo deploy.',
+      HASH_SECRET_MISSING: 'Falta configurar DOCUMENT_HASH_SECRET na Vercel e fazer um novo deploy.',
+      HASH_SECRET_CHANGED: 'A chave de identificação mudou. Restaure DOCUMENT_HASH_SECRET original; não gere outra chave.',
+      DATABASE_TABLES_MISSING: 'O banco está conectado, mas faltam as tabelas. Execute db/schema.sql no SQL Editor do Neon.',
+      DATABASE_AUTH_FAILED: 'O Neon recusou a conexão. Atualize DATABASE_URL na Vercel com a conexão fornecida pelo Neon.',
+      DATABASE_PERMISSION_DENIED: 'A conexão do banco não tem permissão para consultar o histórico.'
+    };
+    throw new Error(diagnostics[record.code] || 'O servidor não conseguiu consultar o histórico. Nenhuma data foi reiniciada.');
   }
   if (record.version !== 2 || ![record.startedAt, record.firstSeenAt, record.serverNow].every(Number.isFinite)) {
     throw new Error('O servidor retornou um histórico inválido. Tente novamente mais tarde.');

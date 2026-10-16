@@ -95,3 +95,21 @@ test('Preparsed Vercel request body is accepted', async()=>{
    assert.equal(status,200);assert.equal(body.firstSeenAt-body.startedAt,7200000);
  } finally {await db.close();}
 });
+
+test('Missing Vercel variables and missing schema return actionable codes without secrets', async () => {
+  const {neonQuery} = await import('../lib/neon.mjs');
+  assert.throws(()=>neonQuery({}), error=>error.code==='DATABASE_URL_MISSING');
+  assert.throws(()=>neonQuery({DATABASE_URL:'not-a-connection'}), error=>error.code==='DATABASE_URL_INVALID');
+  assert.throws(()=>createLookup(()=>{},undefined),error=>error.code==='HASH_SECRET_MISSING');
+  for (const [error, code] of [
+    [new ConfigurationError('private detail','HASH_SECRET_MISSING'),'HASH_SECRET_MISSING'],
+    [Object.assign(new Error('postgres://do-not-expose-secret'),{code:'42P01'}),'DATABASE_TABLES_MISSING'],
+    [Object.assign(new Error('private password'),{code:'28P01'}),'DATABASE_AUTH_FAILED']
+  ]) {
+    let status,body;
+    const res={setHeader(){},set statusCode(v){status=v},end(v){body=JSON.parse(v)}};
+    await createHandler(()=>{throw error})({method:'POST',headers:{'content-type':'application/json'},body:{document:'52998224725'}},res);
+    assert.equal(status,503);assert.equal(body.code,code);
+    assert(!JSON.stringify(body).includes(error.message));
+  }
+});
