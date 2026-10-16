@@ -1,0 +1,110 @@
+/* Exclusivo da versão Correios; não modifica o rodapé atual nem o conteúdo da página. */
+#rodape.rodape-correios {
+    background: #fafafa;
+    color: #00416b;
+    padding: 0;
+    margin-top: 2.5rem;
+    border-top: 5px solid #ffe600;
+    font: 14px/1.5 'Trebuchet MS', Arial, sans-serif;
+}
+#rodape.rodape-correios * { box-sizing: border-box; }
+#rodape.rodape-correios .rc-grupos {
+    display: grid;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 32px 32px;
+}
+#rodape.rodape-correios .rc-grupo { min-width: 0; }
+#rodape.rodape-correios h2 { margin: 0 0 12px; font-size: 20px; line-height: 1.3; }
+#rodape.rodape-correios h2 button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 44px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: none;
+    text-transform: none;
+    opacity: 1;
+}
+#rodape.rodape-correios h2 button span { font-size: 24px; }
+#rodape.rodape-correios ul { list-style: none; padding: 0; margin: 0; }
+#rodape.rodape-correios ul[hidden] { display: none; }
+#rodape.rodape-correios li { padding: 0; margin: 0; }
+#rodape.rodape-correios a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+    color: #00416b;
+    text-decoration: none;
+    max-width: 100%;
+}
+#rodape.rodape-correios a:hover { color: #a65718; text-decoration: underline; }
+#rodape.rodape-correios a:focus-visible,
+#rodape.rodape-correios button:focus-visible { outline: 2px solid #a65718; outline-offset: 2px; }
+#rodape.rodape-correios a img { width: 16px; height: 16px; object-fit: contain; flex-shrink: 0; }
+#rodape.rodape-correios .rc-grupo-icones ul { display: flex; flex-wrap: wrap; gap: 4px; }
+#rodape.rodape-correios .rc-grupo-icones ul[hidden] { display: none; }
+#rodape.rodape-correios .rc-grupo-icones a { min-width: 44px; min-height: 44px; justify-content: center; }
+#rodape.rodape-correios .rc-grupo-icones a img { width: 32px; height: 32px; }
+#rodape.rodape-correios .rc-grupo-icones a span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+#rodape.rodape-correios .rc-base {
+    padding: 12px 10px 10px 15px;
+    background: #ffe600 url('../images/rodape-bg.svg') no-repeat center bottom / 100% 150px;
+}
+#rodape.rodape-correios .rc-base-conteudo { max-width: 1400px; margin: 0 auto; text-align: center; }
+#rodape.rodape-correios .rc-marcas { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto 15px; }
+#rodape.rodape-correios .rc-identificacao p { margin: 0 0 10px; }
+@media (max-width: 991px) {
+    #rodape.rodape-correios .rc-grupos { gap: 12px; }
+    #rodape.rodape-correios h2 { margin-bottom: 0; }
+    #rodape.rodape-correios .rc-grupo > ul { margin-top: 8px; }
+}
+@media (min-width: 992px) {
+    #rodape.rodape-correios .rc-grupos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    #rodape.rodape-correios .rc-grupo:nth-child(-n+3) { grid-row: 1 / 3; }
+    #rodape.rodape-correios .rc-grupo:last-child { grid-column: 4; }
+    #rodape.rodape-correios h2 button { cursor: default; }
+    #rodape.rodape-correios h2 button span { display: none; }
+}
+@media (min-width: 768px) {
+    #rodape.rodape-correios .rc-base-conteudo { position: relative; }
+    #rodape.rodape-correios .rc-marcas { width: 33%; margin-bottom: 0; }
+    #rodape.rodape-correios .rc-identificacao p { position: absolute; left: 0; margin-bottom: 0; text-align: left; }
+    #rodape.rodape-correios .rc-identificacao p:first-child { top: 20%; }
+    #rodape.rodape-correios .rc-identificacao p:last-child { top: 60%; }
+}
+body.contrast #rodape.rodape-correios,
+body.alto-contraste #rodape.rodape-correios,
+body.contrast #rodape.rodape-correios .rc-base,
+body.alto-contraste #rodape.rodape-correios .rc-base { background: #000; color: #fff; }
+body.contrast #rodape.rodape-correios h2,
+body.alto-contraste #rodape.rodape-correios h2 { color: #fff; }
+body.contrast #rodape.rodape-correios a,
+body.alto-contraste #rodape.rodape-correios a { color: #ff0; }
+body.contrast #rodape.rodape-correios a img,
+body.alto-contraste #rodape.rodape-correios a img { filter: brightness(0) invert(1); }
+@media print {
+    #rodape.rodape-correios ul[hidden] { display: block; }
+    #rodape.rodape-correios .rc-grupo-icones ul[hidden] { display: flex; }
+    #rodape.rodape-correios h2 button span { display: none; }
+}

@@ -1,0 +1,15 @@
+<svg fill="#A65718" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+    <defs>
+        <style>.cls-1{fill-opacity:0;opacity:0;}</style>
+    </defs>
+    <title>acompanhar</title>
+    <g id="Camada_2" data-name="Camada 2">
+        <g id="Ícones_Outline" data-name="Ícones Outline">
+            <g id="acompanhar">
+                <path d="M40.41,37.59,36.23,33.4a8,8,0,1,0-2.57,3.09l3.93,3.93a2,2,0,0,0,2.83-2.83ZM29,34a4,4,0,1,1,4-4A4,4,0,0,1,29,34Z"/>
+                <path d="M16,33H13.5A1.38,1.38,0,0,1,12,31.78V9.22A1.4,1.4,0,0,1,13.5,8H22v4a3,3,0,0,0,3,3h4v2a2,2,0,0,0,4,0V11a2,2,0,0,0-.72-1.54l-6-5A2,2,0,0,0,25,4H13.5A5.37,5.37,0,0,0,8,9.22V31.78A5.37,5.37,0,0,0,13.5,37H16a2,2,0,0,0,0-4Z"/>
+                <rect class="cls-1" width="48" height="48"/>
+            </g>
+        </g>
+    </g>
+</svg>

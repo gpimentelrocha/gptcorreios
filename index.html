@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Rastreamento de objetos</title><link rel="icon" href="images/favi-ect.png"><link rel="stylesheet" href="css/footer-correios.css"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body><a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<div class="access"><button id="contrast" type="button">◐ Alto contraste</button><a href="#conteudo">Acessibilidade</a></div>
+<header><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button><a href="https://www.correios.com.br" aria-label="Portal Correios"><img class="logo" src="images/logo-ect.svg" alt="Correios"></a><a class="login" href="https://rastreamento.correios.com.br/">♙ <span>Entrar</span></a></header>
+<nav id="menu" hidden aria-label="Menu principal"><strong>Rastreamento</strong><a href="https://www.correios.com.br/acesso-a-informacao/perguntas-frequentes">Perguntas frequentes</a><a href="https://buscaagencia.correios.com.br/">Busca Agências</a><a href="https://www.correios.com.br/falecomoscorreios/central-de-atendimento">Central de Atendimento</a></nav>
+<main id="conteudo"><nav class="breadcrumb" aria-label="Você está aqui"><a href="https://www.correios.com.br">Portal Correios</a><span>›</span><span>Rastreamento</span></nav><h1>Rastreamento</h1>
+<section class="tracking" aria-labelledby="tracking-title"><form id="tracking-form"><label id="tracking-title" for="objeto">Deseja acompanhar seu objeto?<br><span>Digite um CPF ou um CNPJ</span></label><input id="objeto" name="objeto" type="text" inputmode="numeric" maxlength="18" placeholder="000.000.000-00" autocomplete="off" required aria-describedby="hint feedback"><p id="script-status" role="alert">Se o botão não responder, baixe este HTML e abra no Chrome, Safari ou Firefox. A prévia de arquivos pode bloquear o JavaScript necessário para a consulta.</p><p id="hint">Informe um CPF ou CNPJ válido para continuar.</p><div class="action-row"><button class="primary" type="submit"><img src="images/search.svg" alt=""> Consultar</button></div><p id="feedback" role="status" aria-live="polite"></p></form></section>
+<section id="tracking-result" hidden aria-label="Histórico de rastreamento fictício">
+<a class="back-link" href="#">‹ Consultar outro documento</a>
+
+
+
+<ol id="timeline" class="timeline" aria-label="Histórico de eventos fictícios"></ol>
+
+<details class="storage-details"><summary>Sobre este histórico</summary><p class="storage-note">Histórico salvo no servidor. A primeira consulta fixa a postagem duas horas antes do acesso; consultar o mesmo CPF/CNPJ em outro navegador mantém essa data. Horários de Brasília.</p></details>
+</section><section class="banner" aria-label="Destaques"><a id="banner-link" href="https://www.maiscorreios.com.br/"><img id="banner-image" src="images/aa61569f409afbc9.png" alt="Mês do cliente — Mais Correios"></a><button class="prev" aria-label="Banner anterior">‹</button><button class="next" aria-label="Próximo banner">›</button><div class="dots" role="group" aria-label="Selecionar banner"><button aria-label="Banner 1" aria-pressed="true"></button><button aria-label="Banner 2" aria-pressed="false"></button><button aria-label="Banner 3" aria-pressed="false"></button></div></section>
+</main><footer id="rodape" class="rodape-correios">
+            <!-- Conteúdo e links do portal Correios, consultados em 23/09/2026. -->
+<div class="rc-grupos">
+    <section class="rc-grupo">
+        <h2><button type="button" aria-expanded="true" aria-controls="rc-links-0">Fale Conosco<span aria-hidden="true">−</span></button></h2>
+        <ul id="rc-links-0">
+            <li><a href="https://faleconosco.correios.com.br/app/index.php"><img src="images/registro-de-manifestacoes.png" alt="" loading="lazy"><span>Registro de manifestações</span></a></li>
+            <li><a href="https://www.correios.com.br/falecomoscorreios/central-de-atendimento"><img src="images/central-de-atendimento.png" alt="" loading="lazy"><span>Central de atendimento</span></a></li>
+            <li><a href="https://faleconosco.correios.com.br/app/cadastro/contrate/index.php"><img src="images/solucoes-para-o-seu-negocio.png" alt="" loading="lazy"><span>Soluções para o seu negócio</span></a></li>
+            <li><a href="https://faleconosco.correios.com.br/app/cadastro/suporte/index.php"><img src="images/suporte-ao-cliente-com-contrato.png" alt="" loading="lazy"><span>Suporte ao cliente com contrato</span></a></li>
+            <li><a href="https://www.correios.com.br/falecomoscorreios/ouvidoria"><img src="images/ouvidoria.png" alt="" loading="lazy"><span>Ouvidoria</span></a></li>
+            <li><a href="https://www.correios.com.br/falecomoscorreios/canais-de-denuncia"><img src="images/denuncia.png" alt="" loading="lazy"><span>Denúncia</span></a></li>
+            <li><a href="https://www.correios.com.br/falecomoscorreios/seguranca/seguranca"><img src="images/seguranca.png" alt="" loading="lazy"><span>Segurança</span></a></li>
+        </ul>
+    </section>
+    <section class="rc-grupo">
+        <h2><button type="button" aria-expanded="true" aria-controls="rc-links-1">Sobre os Correios<span aria-hidden="true">−</span></button></h2>
+        <ul id="rc-links-1">
+            <li><a href="https://www.correios.com.br/acesso-a-informacao/institucional/identidade-corporativa"><img src="images/identidade-corporativa.svg" alt="" loading="lazy"><span>Identidade corporativa</span></a></li>
+            <li><a href="https://www.correios.com.br/educacao-e-cultura"><img src="images/educacao-e-cultura.svg" alt="" loading="lazy"><span>Educação e cultura</span></a></li>
+            <li><a href="https://www.correios.com.br/acesso-a-informacao/servidores/arquivos/codigo-de-conduta-etica-integridade"><img src="images/codigo-de-etica.svg" alt="" loading="lazy"><span>Código de Conduta Ética e Integridade</span></a></li>
+            <li><a href="https://www.correios.com.br/acesso-a-informacao/transparencia-e-governanca/transparencia-e-prestacao-de-contas/transparencia-e-prestacao-de-contas"><img src="images/transparencia-e-prestacao-de-contas.svg" alt="" loading="lazy"><span>Transparência e prestação de contas</span></a></li>
+            <li><a href="https://www.correios.com.br/acesso-a-informacao/transparencia-e-governanca/sustentabilidade/sustentabilidade"><img src="images/sustentabilidade.png" alt="" loading="lazy"><span>Sustentabilidade</span></a></li>
+            <li><a href="https://www.correios.com.br/falecomoscorreios/minha-privacidade-nos-correios"><img src="images/politica-de-privacidade-e-cookies.png" alt="" loading="lazy"><span>Minha Privacidade nos Correios</span></a></li>
+            <li><a href="https://www.correios.com.br/sitemap"><img src="images/filatelia.svg" alt="" loading="lazy"><span>Mapa do Site</span></a></li>
+        </ul>
+    </section>
+    <section class="rc-grupo">
+        <h2><button type="button" aria-expanded="true" aria-controls="rc-links-2">Informações<span aria-hidden="true">−</span></button></h2>
+        <ul id="rc-links-2">
+            <li><a href="http://www.postalis.org.br/"><img src="images/postalis.png" alt="" loading="lazy"><span>Postalis</span></a></li>
+            <li><a href="https://www.postalsaude.com.br/"><img src="images/postal-saude.png" alt="" loading="lazy"><span>Postal Saúde</span></a></li>
+            <li><a href="https://www.gov.br/mcom/pt-br"><img src="images/ministerio-das-comunicacoes.svg" alt="" loading="lazy"><span>Ministério das Comunicações</span></a></li>
+            <li><a href="https://www.correios.com.br/acesso-a-informacao/acoes-e-programas/carta-de-servicos-aos-usuarios"><img src="images/carta-de-servico-ao-usuario.png" alt="" loading="lazy"><span>Carta de Serviço ao Usuário</span></a></li>
+            <li><a href="https://www.correios.com.br/falecomoscorreios/sei-protocolo-eletronico"><img src="images/sei-protocolo-eletronico.png" alt="" loading="lazy"><span>SEI - Protocolo Eletrônico</span></a></li>
+            <li><a href="https://www.correios.com.br/acesso-a-informacao/"><img src="images/acesso-a-informacao.png" alt="" loading="lazy"><span>Acesso à Informação</span></a></li>
+            <li><a href="https://loja.correios.com.br/"><img src="images/loja-on-line.svg" alt="" loading="lazy"><span>Loja on Line</span></a></li>
+        </ul>
+    </section>
+    <section class="rc-grupo rc-grupo-icones">
+        <h2><button type="button" aria-expanded="true" aria-controls="rc-links-3">Siga os Correios<span aria-hidden="true">−</span></button></h2>
+        <ul id="rc-links-3">
+            <li><a href="https://www.youtube.com/@correiosoficial"><img src="images/youtube.svg" alt="" loading="lazy"><span>Youtube</span></a></li>
+            <li><a href="https://www.instagram.com/correiosoficial/"><img src="images/instagram.png" alt="" loading="lazy"><span>Instagram</span></a></li>
+            <li><a href="https://www.facebook.com/correios/?locale=pt_BR"><img src="images/facebook.png" alt="" loading="lazy"><span>Facebook</span></a></li>
+            <li><a href="https://br.linkedin.com/company/correios"><img src="images/linkedin.png" alt="" loading="lazy"><span>Linkedin</span></a></li>
+            <li><a href="https://www.tiktok.com/@correiosoficialbr"><img src="images/tik-tok.svg" alt="" loading="lazy"><span>Tik Tok</span></a></li>
+            <li><a href="https://www.flickr.com/photos/correiosoficial/"><img src="images/flickr-correios.png" alt="" loading="lazy"><span>Flickr - Correios</span></a></li>
+            <li><a href="https://twitter.com/correiosBR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="images/twitter-correios.png" alt="" loading="lazy"><span>Twitter Correios</span></a></li>
+        </ul>
+    </section>
+    <section class="rc-grupo rc-grupo-icones">
+        <h2><button type="button" aria-expanded="true" aria-controls="rc-links-4">Aplicativos Correios<span aria-hidden="true">−</span></button></h2>
+        <ul id="rc-links-4">
+            <li><a href="https://apps.apple.com/br/developer/ect-empresa-brasileira-de-correios-e-telegrafos/id866480129"><img src="images/aplicativo-correios-apple.png" alt="" loading="lazy"><span>Aplicativo Correios - Apple</span></a></li>
+            <li><a href="https://play.google.com/store/apps/developer?id=Empresa+Brasileira+de+Correios+e+Telegrafos&amp;amp;hl=pt"><img src="images/aplicativo-correios-android.png" alt="" loading="lazy"><span>Aplicativo Correios - Android</span></a></li>
+        </ul>
+    </section>
+</div>
+<div class="rc-base">
+    <div class="rc-base-conteudo">
+        <img class="rc-marcas" src="images/marca-gov.png" alt="Correios e Governo Federal" loading="lazy">
+        <div class="rc-identificacao">
+            <p>© Copyright 2026 Correios</p>
+            <p>CNPJ 34.028.316/0001-03</p>
+        </div>
+    </div>
+</div>
+    </footer></body></html>
