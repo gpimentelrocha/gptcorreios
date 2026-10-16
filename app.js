@@ -91,7 +91,7 @@ function showView(requested) {
   const show = requested && activeRecord !== null;
   document.querySelector('#tracking-result').hidden = !show;
   document.querySelector('.tracking').hidden = show;
-  document.querySelector('main > h1').textContent = show ? 'Rastreamento fictício' : 'Rastreamento';
+  document.querySelector('main > h1').textContent = show ? 'Rastreamento' : 'Rastreamento';
   document.body.classList.toggle('result-view', show);
   if (show) {
     renderTimeline();
